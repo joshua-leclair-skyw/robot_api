@@ -1,0 +1,97 @@
+{%extends 'base.html'%}
+
+{% block head %}
+<title>Bot Statuses</title>
+{% endblock %}
+
+
+{% block body %} 
+<script>
+document.getElementById("home").className = "active";
+</script>
+
+<main>
+    <div class="content">
+        <h1 class="dash-text">Bot Status</h1>
+        <div class="bot-content">
+            <div class="shift-content">
+                <h2 class="live">Live Shift Info</h2>
+                <div class="live-shift">
+                    <h3 id="shift">insert data here</h3>
+                </div>
+            </div>
+            <div class="carrie_info">
+                <h2 id="CarrieH">Carrie</h2>
+                <h3 id="Carrie">insert data here</h3>
+            </div>
+            <div class="chippy_info">
+                <h2 id="ChippyH">Chippy</h2>
+                <h3 id="Chippy">insert data here</h3>
+            </div>
+            <div class="scooter_info">
+                <h2 id="ScooterH">Scooter</h2>
+                <h3 id="Scooter">insert data here</h3>
+            </div>
+        </div>
+        <!-- <div class="charts">
+            <div class="chart-1">
+                <h3 id="head-1">Stats from 01/01/2000 to 01/01/2000</h3>
+                <img class="graph-1" id="lotsMoved" href="/weekly" alt="Lots Moved" height="275">
+            </div>
+            <div class="chart-2">
+                <h3 id="head-2">Stats from 01/01/2000 to 01/01/2000</h3>
+                <img class="graph-2" id="lotsMoved-daily" href="/daily" alt="Lots Moved" height="275">
+            </div>
+            <script src="{{ url_for('static', filename='js/weeklyTrends.js') }}"></script>
+        </div> -->
+        <div class="charts">
+            <div>
+                <h3 id="head-1">Stats from 01/01/2000 to 01/01/2000</h3>
+                <img class="graph-1" id="lotsMoved" src="" alt="Lots Moved" height="300">
+            </div>
+            <div>
+                <h3 id="head-2">Stats from 01/01/2000 to 01/01/2000</h3>
+                <img class="graph-2" id="lotsMoved-daily" src="" alt="Lots Moved" height="300">
+            </div>
+            <script src="{{ url_for('static', filename='js/weeklyTrends.js') }}"></script>
+            <script src="{{ url_for('static', filename='js/updater-jacob.js') }}"></script>
+        </div>
+    </div>
+</main>
+<div class="right">
+    <div class="top">
+        <button id="menu-btn">
+            <span class="material-symbols-sharp">menu</span>
+        </button>
+        <div class="theme-toggler">
+            <span class="material-symbols-sharp active">light_mode</span>
+            <span class="material-symbols-sharp">dark_mode</span>
+        </div>
+    </div>
+    <div class="bot-table-section">
+        <h2 class="onboard-head">Lots Onboard</h2>
+        <div class="onboard-tables">
+            <div class="carrie-table-section">
+                <h2 class="carrie-table-head">Carrie</h2>
+                <div class="carrie-table">
+                    <h3 id="Carrie-table-data">insert data here</h3>
+                </div>
+            </div>
+            <div class="chippy-table-section">
+                <h2 class="chippy-table-head">Chippy</h2>
+                <div class="chippy-table">
+                    <h3 id="Chippy-table-data">insert data here</h3>
+                </div>
+            </div>
+            <div class="scooter-table-section">
+                <h2 class="scooter-table-head">Scooter</h2>
+                <div class="scooter-table">
+                    <h3 id="Scooter-table-data">insert data here</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/updater-jacob2.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</div>
+{% endblock %}
